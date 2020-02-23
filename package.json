@@ -2,13 +2,10 @@
   "name": "simple-serverside",
   "version": "1.0.0",
   "description": "Simple Serverside Javasccript Template",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "jest",
-    "dev": "nodemon --exec babel-node src/index.js",
-    "dev:src": "nodemon --exec babel-node",
-    "build": "babel src -d dist",
-    "serve": "node dist/index.js"
+    "build": "webpack"
   },
   "author": "Putu Harum Bawa",
   "license": "ISC",
@@ -26,7 +23,9 @@
     "jest": "^25.1.0",
     "lint-staged": "^10.0.2",
     "nodemon": "^2.0.2",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {},
   "husky": {

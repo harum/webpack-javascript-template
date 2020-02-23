@@ -1,3 +1,6 @@
-import add from './add.js';
+import add from './add';
 
-console.log('Add 2 + 3 = ', add(2, 3));
+const number = add(4, 5);
+
+console.log('number', number);
+document.body.innerHTML = number;
