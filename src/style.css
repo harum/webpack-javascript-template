@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./Raleway-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 .container {
   display: block;
   background: url('./tick.png');
-  background-width: 512px;
+  background-size: 100px;
   width: 512px;
   height: 512px;
+  font-family: 'MyFont';
 }
