@@ -2,10 +2,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
+const meta = {
+  viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+  'theme-color': '#4285f4',
+};
+
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    app: './src/app.js',
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -27,7 +35,17 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      // Generates default index.html
+      meta,
       title: 'Webpack Javascript Template',
+    }),
+    new HtmlWebpackPlugin({
+      // Generates app.html
+      meta,
+      filename: 'app.html',
+      template: 'src/templates/app.html',
+      title: 'Webpack Javascript App Template',
+      chunks: ['app'],
     }),
   ],
 };
