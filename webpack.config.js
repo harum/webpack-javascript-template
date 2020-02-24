@@ -38,6 +38,7 @@ module.exports = {
       // Generates default index.html
       meta,
       title: 'Webpack Javascript Template',
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       // Generates app.html
