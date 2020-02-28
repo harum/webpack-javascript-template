@@ -8,6 +8,7 @@ const meta = {
 };
 
 module.exports = {
+  mode: 'development',
   entry: {
     index: './src/index.js',
     app: './src/app.js',
@@ -15,6 +16,10 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
   },
   module: {
     rules: [
