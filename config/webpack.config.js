@@ -54,6 +54,20 @@ module.exports = {
       title: 'Webpack Javascript App Template',
       chunks: ['app'],
     }),
-    new FaviconsWebpackPlugin(path.resolve(__dirname, '../src/logo.png')),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, '../src/logo.png'),
+      prefix: '',
+      favicons: {
+        appName: 'My App',
+        appShortName: 'App',
+        appDescription: 'This is my application',
+        developerName: 'Putu Harum Bawa',
+        developerURL: 'https://harumbawa.com/',
+        background: '#b7e183',
+        theme_color: '#b7e183',
+        display: 'standalone',
+        start_url: '/index.html',
+      },
+    }),
   ],
 };
