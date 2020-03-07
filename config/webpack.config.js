@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
@@ -53,5 +54,6 @@ module.exports = {
       title: 'Webpack Javascript App Template',
       chunks: ['app'],
     }),
+    new FaviconsWebpackPlugin(path.resolve(__dirname, '../src/logo.png')),
   ],
 };
