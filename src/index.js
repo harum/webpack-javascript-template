@@ -1,6 +1,6 @@
 import add from './add';
 import AppIcon from './app.png';
-import './style.css';
+import './style.scss';
 
 function component() {
   const element = document.createElement('div');
