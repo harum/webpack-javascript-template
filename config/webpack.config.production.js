@@ -1,3 +1,4 @@
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpackMerge = require('webpack-merge');
 
@@ -25,6 +26,23 @@ const additionalConfig = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name]-[hash].css',
+    }),
+    new WorkboxPlugin.GenerateSW({
+      // Do not precache images
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+      // Define runtime caching rules.
+      runtimeCaching: [
+        {
+          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'images',
+            expiration: {
+              maxEntries: 10,
+            },
+          },
+        },
+      ],
     }),
   ],
 };

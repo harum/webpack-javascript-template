@@ -1,6 +1,7 @@
 import add from './add';
 import AppIcon from './app.png';
 import './style.scss';
+import './registerServiceWorker';
 
 function component() {
   const element = document.createElement('div');

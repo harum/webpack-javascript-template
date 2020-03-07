@@ -8,7 +8,7 @@
     "watch": "webpack --watch --config config/webpack.config.development.js",
     "dev": "webpack-dev-server --open --config config/webpack.config.development.js",
     "build": "webpack --config config/webpack.config.production.js",
-    "start": "http-server dist"
+    "start": "http-server dist -p 3030"
   },
   "author": "Putu Harum Bawa",
   "license": "ISC",
@@ -42,7 +42,8 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "workbox-webpack-plugin": "^5.0.0"
   },
   "dependencies": {
     "cssnano": "^4.1.10"
