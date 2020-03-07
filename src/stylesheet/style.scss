@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'MyFont';
-  src: url('./Raleway-Regular.ttf') format('truetype');
+  src: url('../fonts/Raleway-Regular.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 .container {
   display: block;
-  background: url('./tick.png');
+  background: url('../images/tick.png');
   background-size: 100px;
   width: 512px;
   height: 512px;

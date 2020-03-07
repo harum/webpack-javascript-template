@@ -11,8 +11,8 @@ const meta = {
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    app: './src/app.js',
+    index: './src/entries/index.js',
+    app: './src/entries/app.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -55,7 +55,7 @@ module.exports = {
       chunks: ['app'],
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '../src/logo.png'),
+      logo: path.resolve(__dirname, '../src/images/logo.png'),
       prefix: '',
       favicons: {
         appName: 'My App',

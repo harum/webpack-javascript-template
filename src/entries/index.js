@@ -1,7 +1,9 @@
-import add from './add';
-import AppIcon from './app.png';
-import './style.scss';
-import './registerServiceWorker';
+import add from '../javascript/add';
+import '../javascript/registerServiceWorker';
+
+import '../stylesheet/style.scss';
+
+import AppIcon from '../images/app.png';
 
 function component() {
   const element = document.createElement('div');
